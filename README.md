@@ -142,3 +142,11 @@ Where Other Libraries May Be Better:
 •	For Data-Driven Simulations: Libraries like SimPy, Pandas, and Matplotlib are better suited for scientific, statistical, or data-intensive simulations.
 •	For Advanced Performance: PyBullet, PyOpenGL, and Pyglet can offer better performance for complex, resource-heavy simulations (especially 3D or physics-based).
 In conclusion, Pygame is excellent for straightforward, 2D, interactive, real-time simulations, especially for game development, but other libraries may be better depending on the complexity and type of simulation you want to create.
+
+Installation:
+---------------------------
+Step 1: Install required pakages on terminal
+    pip install -r requirements.txt
+    python setup.py build_ext --inplace
+Step 2: To run the code
+    python simulation.py
