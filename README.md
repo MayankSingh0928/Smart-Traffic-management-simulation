@@ -1,5 +1,5 @@
 # Smart-Traffic-management-simulation
-Design show how traffic can be managed by using switching algorithm 
+Simulation show how traffic can be managed by using switching algorithm 
 
 These are the libraries Used in this Simulation:- 
 
