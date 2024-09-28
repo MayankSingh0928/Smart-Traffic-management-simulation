@@ -16,7 +16,7 @@ defaultMaximum = 60
 
 signals = []
 noOfSignals = 4
-simTime = 200      #time for simulating
+simTime = 200      #time
 timeElapsed = 0
 
 currentGreen = 0   # Indicates which signal is green
@@ -24,12 +24,12 @@ nextGreen = (currentGreen+1)%noOfSignals
 currentYellow = 0   # Indicates yellow signal is on or off 
 
 # Average times for vehicles to pass the intersection
-carTime = 2
+carTime = 2.15
 bikeTime = 1
 rickshawTime = 2.25 
-busTime = 2.5
-truckTime = 2.5
-ambulanceTime = 2.5
+busTime = 2
+truckTime = 2
+ambulanceTime = 2
 # Count of cars at a traffic signal
 noOfCars = 0
 noOfBikes = 0
@@ -63,12 +63,12 @@ stopLines = {'right': 575, 'down': 326, 'left': 790, 'up': 535}
 defaultStop = {'right': 565, 'down': 316, 'left': 800, 'up': 545}
 stops = {'right': [580,580,580], 'down': [320,320,320], 'left': [810,810,810], 'up': [545,545,545]}
 
-mid = {'right': {'x':675, 'y':445}, 'down': {'x':710, 'y':413}, 'left': {'x':700, 'y':425}, 'up': {'x':695, 'y':410}}
-rotationAngle = 2
+mid = {'right': {'x':615, 'y':485}, 'down': {'x':680, 'y':355}, 'left': {'x':760.02, 'y':390}, 'up': {'x':695, 'y':470}}
+rotationAngle = 1
 
 
-gap = 10   # stopping gap
-gap2 = 35   # moving gap
+gap = 15   # stopping gap
+gap2 = 65   # moving gap
 
 pygame.init()
 simulation = pygame.sprite.Group()
@@ -108,13 +108,13 @@ class Vehicle(pygame.sprite.Sprite):
     
         if(direction=='right'):
             if(len(vehicles[direction][lane])>1 and vehicles[direction][lane][self.index-1].crossed==0):    
-                self.stop = vehicles[direction][lane][self.index-1].stop - vehicles[direction][lane][self.index-1].currentImage.get_rect().width - gap         # setting stop coordinate as: stop coordinate of next vehicle - width of next vehicle - gap
+                self.stop = vehicles[direction][lane][self.index-1].stop - vehicles[direction][lane][self.index-1].currentImage.get_rect().width - gap2         # setting stop coordinate as: stop coordinate of next vehicle - width of next vehicle - gap
             else:
                 self.stop = defaultStop[direction]
             
-            temp = self.currentImage.get_rect().width + gap    
+            temp = self.currentImage.get_rect().width + gap2     
             x[direction][lane] -= temp
-            stops[direction][lane] -= temp
+            # stops[direction][lane] -= temp
         elif(direction=='left'):
             if(len(vehicles[direction][lane])>1 and vehicles[direction][lane][self.index-1].crossed==0):
                 self.stop = vehicles[direction][lane][self.index-1].stop + vehicles[direction][lane][self.index-1].currentImage.get_rect().width + gap
@@ -128,7 +128,7 @@ class Vehicle(pygame.sprite.Sprite):
                 self.stop = vehicles[direction][lane][self.index-1].stop - vehicles[direction][lane][self.index-1].currentImage.get_rect().height - gap
             else:
                 self.stop = defaultStop[direction]
-            temp = self.currentImage.get_rect().height + gap
+            temp = self.currentImage.get_rect().height + gap2
             y[direction][lane] -= temp
             stops[direction][lane] -= temp
         elif(direction=='up'):
@@ -485,7 +485,7 @@ class Main:
             vehicleCountTexts[i] = font.render(str(displayText), True, black, white)
             screen.blit(vehicleCountTexts[i],vehicleCountCoods[i])
 
-        timeElapsedText = font.render(("Time Elapsed: "+str(timeElapsed)), True, black, white)
+        timeElapsedText = font.render(("Time Passed: "+str(timeElapsed)), True, black, white)
         screen.blit(timeElapsedText,(1100,50))
 
 
@@ -512,7 +512,7 @@ class Main:
         screen.blit(rickshaws,(350,197))
         screen.blit(ambulances,(325,230))
 
-        text_car= font.render("Cars on lane :"+str(noOfCars),True,black,white)
+        text_car= font.render("Cars :"+str(noOfCars),True,black,white)
         screen.blit(text_car,(1100,80))
 
         text_bus= font.render("Buses :" +str(noOfBuses),True,black,white)
