@@ -1,23 +1,33 @@
-# Smart-Traffic-management-simulation
-Simulation show how traffic can be managed by using switching algorithm 
+<h1 align="center">Smart-Traffic-management-simulation</h1>
 
-These are the libraries Used in this Simulation:- 
+<div align="center">
 
-    Random - The random library lets you select a random element from a sequence, whether it's a list, a string, or any iterable.
+[![Python version](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-370/)
+[![License: Apache 2](https://img.shields.io/badge/License-Apache-yellow.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+
+<h4>This Smart-Traffic-management-system uses live images from the cameras at traffic junctions for traffic density calculation and sets the signal timers accordingly, thus reducing the traffic congestion on roads, providing faster transit to people, and reducing fuel consumption.</h4>
+</div>
+<div align="center">
+    <h2>Simulation helps to show how traffic can be managed by using switching algorithm</h2>
+</div>
+-----------------------------------------
+
+### These are the description of libraries Used in this Simulation:- 
+
+    * 'Random' - The random library lets you select a random element from a sequence, whether it's a list, a string, or any iterable.
+    * 'Math' - This part of the mathematical library is designed to work with numbers and their representations. It allows you to effectively carry out the necessary transformations with support for NaN (not a number) and infinity and is one of the most important sections of the Python math library. Below is a short list of features for Python 3rd version.
+    		'math.ceil(x)' - return the ceiling of x, the smallest integer greater than or equal to x
+    		'math.comb(n, k)' - return the number of ways to choose k items from n items without repetition and without order.
+   * 'Time' -  Times in pygame are represented in milliseconds (1/1000 seconds). Most platforms have a limited time resolution of around 10 milliseconds.
     
-    Math - This part of the mathematical library is designed to work with numbers and their representations. It allows you to effectively   carry out the necessary transformations with support for NaN (not a number) and infinity and is one of the most important sections of the Python math library. Below is a short list of features for Python 3rd version.
-    		math.ceil(x) - return the ceiling of x, the smallest integer greater than or equal to x
-    		math.comb(n, k) - return the number of ways to choose k items from n items without repetition and without order.
-    Time -  Times in pygame are represented in milliseconds (1/1000 seconds). Most platforms have a limited time resolution of around 10 milliseconds.
-    
-    Threading -  In the context of Python, threading is a built-in module that allows various threads to execute concurrently.
+   * 'Threading' -  In the context of Python, threading is a built-in module that allows various threads to execute concurrently.
     Threads run in the same unique memory heap. That way, each thread can access every variable and data structure of the program. While they do share the same heap space, each thread has its own stack
     		t = threading.Thread(target=hello_world)
     		t.start().
     
-    PyGame  -   Pygame provides functions for creating programs with a graphical user interface, or GUI
-    SYS  - The sys module provides functions and variables used to manipulate different parts of the Python runtime environment.
-    OS   -	Python OS module provides the facility to establish the interaction between the user and the operating system.
+   * 'PyGame'  -   Pygame provides functions for creating programs with a graphical user interface, or GUI
+   * 'SYS'  - The sys module provides functions and variables used to manipulate different parts of the Python runtime environment.
+   * 'OS'   -	Python OS module provides the facility to establish the interaction between the user and the operating system.
 
 
 About the environment of PyGame
