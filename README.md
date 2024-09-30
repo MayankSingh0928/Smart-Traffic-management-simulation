@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Python version](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-370/)
+[![Python version](https://img.shields.io/badge/python-3.10.11-blue.svg)](https://www.python.org/downloads/release/python-370/)
 [![License: Apache 2](https://img.shields.io/badge/License-Apache-yellow.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 <h4>This Smart-Traffic-management-system uses live images from the cameras at traffic junctions for traffic density calculation and sets the signal timers accordingly, thus reducing the traffic congestion on roads, providing faster transit to people, and reducing fuel consumption.</h4>
