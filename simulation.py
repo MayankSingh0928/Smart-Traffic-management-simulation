@@ -16,7 +16,7 @@ defaultMaximum = 60
 
 signals = []
 noOfSignals = 4
-simTime = 200      #time
+simTime = 120      #time
 timeElapsed = 0
 
 currentGreen = 0   # Indicates which signal is green
@@ -429,6 +429,11 @@ class Main:
     yellowSignal = pygame.image.load('images/signals/yellow.png')
     greenSignal = pygame.image.load('images/signals/green.png')
 
+    camera1 = pygame.image.load('images/right/camera1.png')
+    camera2 = pygame.image.load('images/down/camera2.png')
+    camera3 = pygame.image.load('images/left/camera3.png')
+    camera4 = pygame.image.load('images/up/camera4.png')
+
     cars = pygame.image.load('images/right/car.png')
     buses = pygame.image.load('images/right/bus.png')
     bikes = pygame.image.load('images/right/bike.png')
@@ -530,6 +535,10 @@ class Main:
         text_ambulance= font.render("Ambulance :" +str(noOfAmbulance),True,black,white)
         screen.blit(text_ambulance,(1100,230))
 
+        screen.blit(camera1,(780,510))
+        screen.blit(camera2,(545,510))
+        screen.blit(camera3,(550,295))
+        screen.blit(camera4,(760,288))
         
         for vehicle in simulation:  
             screen.blit(vehicle.currentImage, [vehicle.x, vehicle.y])
